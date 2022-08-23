@@ -6,7 +6,7 @@ double[] array = new double[M];
 int count = 0;
 for (int i = 0; i < M; i++)
 {
-	Console.WriteLine($"Введиде число # -  {i + 1}");
+	Console.WriteLine($"Введите число # -  {i + 1}");
 	array[i] = Convert.ToDouble(Console.ReadLine());
 	if (array[i] > 0) count++;
 }
@@ -14,50 +14,16 @@ Console.WriteLine($"Количество введеных положительн
 */
 //#2
 
+Console.Write("k1= ");
+double k1 = Convert.ToDouble(Console.ReadLine());
+Console.Write("b1 =");
+double b1 = Convert.ToDouble(Console.ReadLine());
+Console.Write("k2 =");
+double k2 = Convert.ToDouble(Console.ReadLine());
+Console.Write("b2 =");
+double b2 = Convert.ToDouble(Console.ReadLine());
+double x = (b2 - b1) / (k1 - k2);
+double y = k1 * x + b1;
+Console.WriteLine($"Точка пересечения прямых ({x}, {y})");
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-// Задача 42: Напишите программу, которая будет преобразовывать десятичное число в двоичное.
-// 45 -> 101101
-// 3  -> 11
-// 2  -> 10
-
-Console.WriteLine("Введите число:");
-int num = Convert.ToInt32(Console.ReadLine());
-string NumBin = (""); int n = NumBin.Length;
-string BinRevers = (""); string mas = ("");  //char[] mas = new char[n];
-while (num > 0)
-{
-	NumBin = NumBin + Convert.ToString(num % 2);
-	num = num / 2;
-}
-
-for (int i = 0; i < n; i++)
-{
-	mas = mas+NumBin[i];
-}
-Console.WriteLine($"mas = {string.Join(" ;",mas)}");
-for (int i = n; i != 0; i--)
-{
-	BinRevers = BinRevers + mas[i - 1];
-}
-
-
-Console.WriteLine($"Строка = {NumBin} ___ {BinRevers}");
